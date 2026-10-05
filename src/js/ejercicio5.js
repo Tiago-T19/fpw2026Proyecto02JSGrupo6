@@ -5,6 +5,10 @@ function calcular() {
   const correctas = parseInt(document.getElementById("correctas").value);
   const resultadoDiv = document.getElementById("resultado");
 
+  // Mostrar valores en consola
+console.log("Total:", total);
+console.log("Correctas:", correctas);
+
   if (isNaN(total) || isNaN(correctas) || total <= 0 || correctas < 0 || correctas > total) {
     resultadoDiv.textContent = "⚠️ Ingresa valores válidos.";
     resultadoDiv.style.color = "yellow";
