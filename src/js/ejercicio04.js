@@ -5,6 +5,7 @@ function reemplazarSignosPregunta(cadena) {
         if (cadena[i] === '?') {
             const izq = parseInt(cadena[i - 1]);
             const der = parseInt(cadena[i + 1]);
+            
             const suma = izq + der;
             resultado += suma;
         } else {
@@ -16,7 +17,12 @@ function reemplazarSignosPregunta(cadena) {
 }
 
 const entrada = prompt("Ingrese la cadena intercalada de digitos (0-5) y '?' (ej. 3?4):");
-const cadenaTransformada = reemplazarSignosPregunta(entrada);
 
-console.log("Cadena original:", entrada);
-console.log("Cadena resultante:", cadenaTransformada);
+if (entrada !== null) { 
+    const cadenaTransformada = reemplazarSignosPregunta(entrada);
+
+    console.log("Cadena original:", entrada);
+    console.log("Cadena resultante:", cadenaTransformada);
+
+    alert("Cadena original: " + entrada + "\nCadena resultante: " + cadenaTransformada);
+}
