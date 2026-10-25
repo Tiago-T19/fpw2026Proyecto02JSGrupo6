@@ -5,7 +5,7 @@ function calcular() {
   const correctas = parseInt(document.getElementById("correctas").value);
   const resultadoDiv = document.getElementById("resultado");
 
-  // Mostrar valores en consola
+
 console.log("Total:", total);
 console.log("Correctas:", correctas);
 
