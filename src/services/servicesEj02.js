@@ -1,8 +1,3 @@
-export const calcularAreaTriangulo = (
-    base,
-    altura
-) => {
-
+export function calcularAreaTriangulo(base, altura) {
     return (base * altura) / 2;
-
-};
+}

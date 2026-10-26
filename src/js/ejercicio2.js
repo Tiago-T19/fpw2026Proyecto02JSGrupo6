@@ -1,31 +1,18 @@
-import {calcularAreaTriangulo} from "../services/servicesEj02.js";
+import { calcularAreaTriangulo } from "../services/servicesEj02.js";
 
-const inputBase = document.getElementById('base');
-const inputAltura = document.getElementById('altura');
-const btnCalcular = document.getElementById('btnCalcular');
-const textoResultado = document.getElementById('resultado');
+let base = parseFloat(prompt("Ingrese la base del triángulo:"));
+let altura = parseFloat(prompt("Ingrese la altura del triángulo:"));
 
-btnCalcular.addEventListener('click', () => {
-    const base = parseFloat(inputBase.value);
-    const altura = parseFloat(inputAltura.value);
+if (isNaN(base) || isNaN(altura) || base <= 0 || altura <= 0) {
 
-console.log("Base:", base);
-console.log("Altura:", altura);
+    alert("Ingrese valores válidos.");
 
-    if (isNaN(base) || isNaN(altura) || base <= 0 || altura <= 0) {
-        textoResultado.innerText = 'Por favor, ingrese valores numéricos válidos mayores a 0.';
-        return;
-    }
+} else {
 
-       const area =
-        calcularAreaTriangulo(base,altura);
+    let area = calcularAreaTriangulo(base, altura);
 
-    console.log("Área:", area);
-
-    textoResultado.innerText = `El área del triángulo es: ${area}`;
-});
-
-
+    alert(`El área del triángulo es: ${area}`);
+}
 
 
 
